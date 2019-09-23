@@ -6,7 +6,7 @@ importScripts('js/sw-utils.js');
 /**
  * Tipos de caches de la aplicación.
  */
-const ESTATICO = 'estatico_v3';
+const ESTATICO = 'estatico_v1';
 const INMUTABLE = 'inmutable_v1';
 const DINAMICO = 'dinamico_v1';
 
