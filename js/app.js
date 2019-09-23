@@ -1,6 +1,13 @@
+// Verificación de la dirección actual (producción o desarrollo)
+const URL = window.location.href;
+var SWLOCATION = '/fake-twitter/sw.js';
+
 // Intalación del Service Worker
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js');
+  if (URL.includes('localhost')) {
+    SWLOCATION = '/sw.js';
+  }
+  navigator.serviceWorker.register(SWLOCATION);
 }
 
 // Referencias de jQuery

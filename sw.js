@@ -1,7 +1,8 @@
 /**
  * Importaciones de archivos.
  */
-importScripts('/js/sw-utils.js');
+importScripts('js/sw-utils.js');
+
 /**
  * Tipos de caches de la aplicación.
  */
@@ -13,12 +14,12 @@ const DINAMICO = 'dinamico_v1';
  * Recursos estáticos.
  */
 const SHELL = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/app.js',
+  //   '/',
+  'index.html',
+  'css/style.css',
+  'js/app.js',
   'img/favicon.ico',
-  '/js/sw-utils.js'
+  'js/sw-utils.js'
 ];
 
 /**
