@@ -8,7 +8,7 @@ importScripts('js/sw-utils.js');
  */
 const ESTATICO = 'estatico_v2';
 const INMUTABLE = 'inmutable_v2';
-const DINAMICO = 'dinamico_v1';
+const DINAMICO = 'dinamico_v2';
 
 /**
  * Recursos estáticos.
