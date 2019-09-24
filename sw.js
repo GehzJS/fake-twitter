@@ -6,8 +6,8 @@ importScripts('js/sw-utils.js');
 /**
  * Tipos de caches de la aplicación.
  */
-const ESTATICO = 'estatico_v1';
-const INMUTABLE = 'inmutable_v1';
+const ESTATICO = 'estatico_v2';
+const INMUTABLE = 'inmutable_v2';
 const DINAMICO = 'dinamico_v1';
 
 /**
@@ -62,6 +62,9 @@ self.addEventListener('activate', evento => {
   const renovar = caches.keys().then(keys => {
     keys.forEach(key => {
       if (key !== ESTATICO && key.includes('estatico')) {
+        return caches.delete(key);
+      }
+      if (key !== DINAMICO && key.includes('dinamico')) {
         return caches.delete(key);
       }
     });
